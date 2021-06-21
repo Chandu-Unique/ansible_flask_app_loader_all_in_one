@@ -1,0 +1,6 @@
+---
+
+load_balancer_packages:
+  - haproxy
+
+
