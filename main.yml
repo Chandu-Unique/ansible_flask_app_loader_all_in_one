@@ -32,15 +32,15 @@
 
   tasks:
 
-      - name: Install Postgres packages
-        package:
+    - name: Install Postgres packages
+      package:
           name: "{{ __package }}"
           state: present
-        loop: 
-          - "{{ postgres_rhel7_repo }}"        
-          - "{{ postgres_packages }}"
-          - "{{ postgres_library }}"
-        loop_control:
+      loop: 
+         - "{{ postgres_rhel7_repo }}"        
+         - "{{ postgres_packages }}"
+         - "{{ postgres_library }}"
+      loop_control:
           loop_var: __package
 
     - name: Check if Postgres initialized
